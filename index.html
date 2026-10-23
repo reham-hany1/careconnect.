@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CareConnect | Health Organizer</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="#"><span class="brand-icon">✚</span> CareConnect</a>
+<nav><a href="#dashboard">Dashboard</a><a href="#appointments">Appointments</a><a href="#reminders">Reminders</a></nav>
+<button class="outline-button" id="todayButton">Today</button></header>
+<main class="container">
+<section class="hero"><div><p class="eyebrow">YOUR PERSONAL HEALTH ORGANIZER</p><h1>Take care of your<br><span>time and wellbeing.</span></h1>
+<p class="hero-copy">Keep your appointments organized and your schedule clear — all in one simple place.</p>
+<a class="primary-button" href="#appointments">＋ Add an appointment</a></div>
+<div class="hero-art" aria-hidden="true"><div class="art-circle"></div><div class="art-cross">✚</div>
+<div class="art-card card-one"><span class="mini-icon">♡</span><div><b>Wellbeing first</b><small>One step at a time</small></div></div>
+<div class="art-card card-two"><span class="calendar-icon">▦</span><div><b>Stay organized</b><small>Your schedule, simplified</small></div></div></div></section>
+<section class="stats" id="dashboard">
+<article class="stat-card"><div class="stat-top"><span>Upcoming</span><span class="stat-icon purple">▦</span></div><strong id="upcomingCount">0</strong><small>Appointments ahead</small></article>
+<article class="stat-card"><div class="stat-top"><span>Completed</span><span class="stat-icon green">✓</span></div><strong id="completedCount">0</strong><small>Appointments completed</small></article>
+<article class="stat-card"><div class="stat-top"><span>Reminders</span><span class="stat-icon orange">◷</span></div><strong id="reminderCount">0</strong><small>Notes you've saved</small></article></section>
+<section class="content-grid"><section class="panel" id="appointments"><div class="section-heading"><div><p class="eyebrow">PLAN AHEAD</p><h2>Your appointments</h2></div><span class="pill" id="appointmentPill">0 total</span></div>
+<form id="appointmentForm" class="appointment-form"><div class="field"><label for="appointmentTitle">Appointment title</label><input id="appointmentTitle" required maxlength="70" placeholder="e.g. Dentist check-up"></div>
+<div class="field-row"><div class="field"><label for="appointmentDate">Date</label><input id="appointmentDate" type="date" required></div><div class="field"><label for="appointmentTime">Time</label><input id="appointmentTime" type="time" required></div></div>
+<div class="field"><label for="appointmentNote">Note (optional)</label><input id="appointmentNote" maxlength="120" placeholder="e.g. Bring previous paperwork"></div>
+<div class="field"><label for="reminderLead">Notify me before the appointment</label><select id="reminderLead"><option value="0">At appointment time</option><option value="10">10 minutes before</option><option value="30" selected>30 minutes before</option><option value="60">1 hour before</option><option value="1440">1 day before</option></select></div>
+<button class="primary-button full-button" type="submit">＋ Save appointment</button>
+<p class="notification-help">Browser notifications need permission. For this starter version, keep CareConnect open on each device to receive reminders.</p>
+<button class="secondary-button full-button" id="enableNotifications" type="button">Enable browser notifications</button></form>
+<div class="list-heading"><h3>Saved appointments</h3><span id="emptyHint">Your list will appear here.</span></div><div id="appointmentList" class="appointment-list"></div></section>
+<aside class="side-column"><section class="panel reminder-panel" id="reminders"><div class="section-heading"><div><p class="eyebrow">DON'T FORGET</p><h2>Personal reminders</h2></div><span class="stat-icon orange">◷</span></div>
+<p class="muted">Write a note to help you stay organized.</p><form id="reminderForm"><div class="field"><label for="reminderText">Reminder note</label><textarea id="reminderText" rows="3" maxlength="180" required placeholder="Write a reminder..."></textarea></div><button class="secondary-button full-button" type="submit">Save reminder</button></form><div id="reminderList" class="reminder-list"></div></section>
+<section class="safety-note"><span class="safety-symbol">i</span><div><strong>A helpful note</strong><p>CareConnect is an organizer, not a medical service. Follow your healthcare professional's instructions for medicines and treatment.</p></div></section></aside></section>
+<footer><span>✚ CareConnect</span><span>Simple planning. More peace of mind.</span></footer></main><script src="script.js"></script></body></html>
